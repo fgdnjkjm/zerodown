@@ -1,7 +1,7 @@
-"use server"
+'use server'
 
-import { db } from "@/db"
-import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server"
+import { db } from '@/db'
+import { getKindeServerSession } from '@kinde-oss/kinde-auth-nextjs/server'
 
 export const getAuthStatus = async () => {
     const { getUser } = getKindeServerSession()
@@ -20,7 +20,7 @@ export const getAuthStatus = async () => {
             data: {
                 id: user.id,
                 email: user.email,
-            }
+            },
         })
     }
 
